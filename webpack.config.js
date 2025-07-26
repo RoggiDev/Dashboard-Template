@@ -53,6 +53,15 @@ module.exports = {
     new WorkBoxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
+      runtimeCaching: [
+        {
+          urlPattern: /\.(?:js|css)$/,
+          handler: "CacheFirst",
+          options: {
+            cacheName: "static-resources",
+          },
+        },
+      ],
     }),
   ],
 };

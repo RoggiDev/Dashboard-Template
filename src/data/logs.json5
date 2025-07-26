@@ -1,0 +1,17 @@
+{
+  columns: [
+    "Usuario",
+    "Correo",
+    "Tiempo en la página (min)",
+    "Dispositivo",
+    "País",
+    "Explorador",
+  ],
+  data: [
+    ["Juan Pérez", "juan@example.com", 5.4, "Laptop", "México", "Chrome"],
+    ["María López", "maria@example.com", 3.2, "Tablet", "Argentina", "Safari"],
+    ["Carlos Ramírez", "carlos@example.com", 6.1, "Phone", "España", "Edge"],
+    ["Ana Gómez", "ana@example.com", 4.0, "Laptop", "Chile", "Chrome"],
+    ["Luis Torres", "luis@example.com", 7.5, "Phone", "Colombia", "Firefox"],
+  ],
+}

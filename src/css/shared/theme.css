@@ -1,0 +1,17 @@
+/* Colors */
+:root {
+  --base-color: #ffffff;
+  --primary-color: #143b73;
+  --secondary-color: #212529;
+  --accent-color: #6d90d0;
+  --primary-text: #232d36;
+  --secondary-text: #ffffff;
+}
+
+.darkmode {
+  --base-color: #121212;
+  --primary-color: #ff0000;
+  --accent-color: #0071ff;
+  --primary-text: #e0e0e0;
+  --secondary-text: #b0b0b0;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Yael Rodríguez Gómez" />
+
+    <title>Web Analytics Dashboard Template</title>
+  </head>
+
+  <body>
+    <div class="c-wrapper">
+      <!-- ! Sidebar -->
+      <nav class="c-sidebar d-flex flex-column justify-content-between">
+        <!-- Sidebar Brand -->
+        <div class="c-siderbar-brand p-3">
+          <a href="#" class="d-flex align-items-center text-white">
+            <i class="bi bi-bar-chart-fill fs-2"></i>
+
+            <h1 class="d-none d-md-block ms-3 mb-0 fs-5 fw-semibold">
+              Web Analytics
+            </h1>
+          </a>
+        </div>
+
+        <!-- Sidebar Link -->
+        <div class="c-sidebar-links p-3 my-5">
+          <ul class="m-0 ps-0 ps-md-3">
+            <li class="nav-item mb-2">
+              <a href="" class="d-flex align-items-center text-white">
+                <i class="bi bi-house fs-3"></i>
+
+                <span class="d-none d-md-block ms-3 fw-semibold">Inicio</span>
+              </a>
+            </li>
+
+            <li class="nav-item mb-2">
+              <a href="" class="d-flex align-items-center text-white">
+                <i class="bi bi-activity fs-3"></i>
+
+                <span class="d-none d-md-block ms-3 fw-semibold">
+                  Actividad
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item mb-2">
+              <a href="" class="d-flex align-items-center text-white">
+                <i class="bi bi-gear fs-3"></i>
+
+                <span class="d-none d-md-block ms-3 fw-semibold">
+                  Configuración
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Logout -->
+        <div class="c-sidebar-logout p-3">
+          <a href="#" class="d-flex align-items-center ps-0 ps-md-3 text-white">
+            <i class="bi bi-box-arrow-right fs-3"></i>
+
+            <span class="d-none d-md-block ms-3 fw-semibold"> Logout </span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ! Main -->
+      <main class="d-flex flex-column c-main">
+        <!-- ! Header -->
+        <header class="py-1 py-md-2 bg-dark">
+          <div
+            class="container-fluid d-flex justify-content-between align-items-center"
+          >
+            <div class="d-flex align-items-center col-auto gap-3 text-white">
+              <i class="bi bi-columns-gap px-3 py-2 fs-3"></i>
+
+              <h2 class="d-none d-md-block mb-0 fs-2 fw-bold">Dashboard</h2>
+            </div>
+
+            <div class="d-flex col-7 col-md-6 col-lg-5">
+              <form action="" class="w-100">
+                <div class="input-group">
+                  <input
+                    type="search"
+                    id="search"
+                    name="search"
+                    class="form-control"
+                    placeholder="Search..."
+                    aria-label="Search"
+                  />
+
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="bi bi-search text-white"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <button class="btn col-auto">
+              <i class="bi bi-person-circle text-white fs-3"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- ! Content -->
+        <div class="container-fluid c-content">
+          <section class="c-charts py-3">
+            <div class="row pb-3">
+              <!-- Visitas -->
+              <div class="col-12 col-md pb-3 py-md-0">
+                <div class="h-100 w-100 c-chart">
+                  <canvas id="lineChart"></canvas>
+                </div>
+              </div>
+
+              <!-- Tiempo promedio -->
+              <div class="col-12 col-md-auto pt-3 py-md-0">
+                <div class="card text-center">
+                  <div class="card-header fs-2">Tiempo promedio</div>
+
+                  <div class="card-body">
+                    <i class="bi bi-clock c-clock-icon"></i>
+
+                    <p id="averageTime" class="m-0 c-average-time">42 min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pt-3">
+              <!-- Dispositivos -->
+              <div class="col-12 col-md pb-3 py-md-0">
+                <div class="h-100 w-100 c-chart">
+                  <canvas id="devicesChart"></canvas>
+                </div>
+              </div>
+
+              <!-- Países -->
+              <div class="col-12 col-md-5 py-3 py-md-0">
+                <div id="worldMap" class="h-100 w-100"></div>
+              </div>
+
+              <!-- Navegadores -->
+              <div class="col-12 col-md pt-3 py-md-0">
+                <div class="h-100 w-100">
+                  <canvas id="explorersChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="c-table py-3">
+            <div class="row py-0">
+              <!-- Tabla de registros -->
+              <div class="col-12 col-md py-0 py-md-0">
+                <div class="h-100 w-100">
+                  <div id="grid-table"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ! Footer -->
+        <footer
+          class="p-3 py-md-2 d-flex align-items-center justify-content-center bg-dark text-white"
+        >
+          <span class="fs-3">Made By: RoggiDev</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

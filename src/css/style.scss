@@ -1,0 +1,84 @@
+// Variables
+$sidebar-width: 210px;
+$sidebar-width-sm: 59px;
+
+$font-sizes: (
+  "clock": 70px,
+  "average-time": 50px,
+);
+
+// Mixin para layout flex
+@mixin full-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: stretch;
+}
+
+// Mixin para fixed sidebar
+@mixin fixed-sidebar($width) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: 100%;
+  background-color: var(--primary-color);
+  overflow-y: auto;
+}
+
+// Layout wrapper
+.c-wrapper {
+  @include full-flex;
+}
+
+// Sidebar
+.c-sidebar {
+  @include fixed-sidebar($sidebar-width);
+}
+
+// Main content area
+.c-main {
+  margin-left: $sidebar-width;
+  flex: 1;
+  overflow-y: auto;
+}
+
+// Content area
+.c-content {
+  flex: 1;
+}
+
+.c-chart {
+  height: fit-content;
+}
+
+// Icon size
+.c-clock-icon {
+  font-size: map-get($font-sizes, "clock");
+}
+
+.c-average-time {
+  font-size: map-get($font-sizes, "average-time");
+}
+
+// World map
+#worldMap {
+  height: clamp(300px, 50vh, 600px);
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .c-sidebar {
+    @include fixed-sidebar($sidebar-width-sm);
+  }
+
+  .c-main {
+    margin-left: $sidebar-width-sm;
+  }
+
+  .c-chart {
+    height: 300px !important;
+  }
+}
